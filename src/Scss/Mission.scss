@@ -1,0 +1,163 @@
+@import 'Variables';
+@import 'Mixin';
+
+
+
+
+.mission_section {
+    padding: 90px 0 60px 0;
+    position: relative;
+
+    .mission_main_heading {
+        position: relative;
+        text-align: center;
+
+        // ----Small Top Heading-----
+        h3 {
+            @include Mission_Heading;
+        }
+
+        // ----Top Heading-----
+        h1 {
+            font-weight: 600;
+            font-size: 38px;
+            color: $Text_dark_color;
+            text-transform: capitalize;
+            // @include Main_heading_h1;
+            padding-bottom: 15px;
+        }
+
+        p {
+            text-transform: capitalize;
+            max-width: 650px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            @include Dark_light_para;
+        }
+    }
+
+    // // ----Blog Part-------
+    .mission_bottom_part {
+        cursor: pointer;
+        padding-top: 20px;
+
+        .mission_icon_div {
+            float: left;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 62px;
+            padding: 8px;
+
+            span {
+                z-index: 1;
+                font-size: 30px;
+            }
+        }
+
+        .mission_icon::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transition: all .5s ease-in-out;
+            transform: scale(.4);
+            filter: opacity(0);
+            background: url('../Img/download (10).png') no-repeat 50%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+        }
+
+        .mission_content {
+            overflow: hidden;
+            padding-left: 15px;
+
+            h5 {
+                text-transform: capitalize;
+                font-size: 22px;
+                font-weight: 600;
+                color: #202020;
+                transition: all .5s ease-in-out;
+            }
+
+            p {
+                color: #777;
+                font-size: 15px;
+                font-weight: 500;
+                position: relative;
+                margin-bottom: 15px;
+                transition: all .5s ease-in-out;
+            }
+        }
+
+        &:hover .mission_icon::after {
+            filter: opacity(.1) drop-shadow(0 0 0 #8200ff);
+            transform: scale(1);
+        }
+
+        &:hover h5 {
+            color: #8200ff;
+            transition: all .5s ease-in-out;
+        }
+
+        &:hover .mission_icon {
+            color: #8200ff;
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+// --------Media Query----------
+@media (max-width: 768px) {
+    .mission_section {
+        padding: 45px 0 20px 0;
+    }
+
+    .mission_section .mission_main_heading {
+        h1 {
+            font-size: 32px;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+    }
+
+    .mission_section .mission_bottom_part .mission_content h5 {
+        font-size: 20px;
+    }
+
+    .blogs {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .mission-icon-div,
+    .mission-heading-div h3 {
+        text-align: center;
+    }
+
+    .mission-heading-div {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission_section .mission_main_heading {
+        h1 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 14px;
+        }
+    } 
+}

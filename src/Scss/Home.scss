@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .5px;
+}
+
+.container {
+    max-width: 1440px;
+}
+
+ol,
+ul {
+    padding-left: 0rem;
+}
+
+
+
+
+
+// ----Scroll Bar-----------
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #eee;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 20px;
+}
+
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+@import 'Variables';
+@import 'Mixin';
+
+
+// ----Banner Bg Image------
+.Background_img {
+    background-image: url('../Img/bg-613f75d0989c6beafda899d1b437e961.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+
+    .banner {
+        width: 100%;
+        height: 100%;
+        padding-top: 150px;
+        padding-bottom: 150px;
+
+    }
+
+    .content_div {
+        padding-top: 230px;
+
+
+        h1 {
+            @include Main_heading_h1;
+            padding-bottom: 5px;
+        }
+
+        p {
+            @include banner_para;
+
+        }
+
+        .banner_button {
+            margin-top: 30px;
+
+            .Learn_more {
+                @include Banner_learn_more_btn;
+
+                &:hover {
+                    @include Button_hover;
+                }
+            }
+
+
+            .Get_Started {
+                @include Bg_white_btn;
+
+                .right-arrow {
+                    padding-left: 15px;
+                    color: #7f00ff;
+                }
+
+                &:hover {
+                    @include Button_hover;
+                }
+            }
+        }
+    }
+
+    // -----Banner Right img
+    .Image_div {
+        position: relative;
+        text-align: right;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+}
+
+
+
+@media (max-width: 1499px) {
+    .Background_img .Image_div img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 1499px) {
+    .Background_img .content_div {
+        padding-top: 180px;
+    }
+}
+
+@media (max-width: 1499px) {
+    .Background_img .content_div {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 875px) {
+    .Background_img .content_div {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .Background_img .content_div h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .Background_img .content_div h1 {
+        font-size: 30px;
+    }
+
+    .Background_img .content_div {
+        padding-top: 30px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .Background_img .Image_div img {
+        display: none;
+    }
+
+    .Background_img .content_div {
+        padding-top: 0px;
+    }
+}
+
+
+@media (max-width: 426px) {
+    .Background_img .content_div p {
+        font-size: 15px;
+    }
+
+    .Background_img .content_div .banner_button .Learn_more,
+    .Background_img .content_div .banner_button .Get_Started {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .Background_img .content_div h1 {
+        font-size: 26px;
+    }
+
+    .Background_img .banner {
+        padding-top: 100px;
+        padding-bottom: 75px;
+    }
+
+    .Background_img .content_div .banner_button {
+        margin-top: 10px;
+    }
+}

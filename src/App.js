@@ -1,25 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'antd/dist/antd.css';
+
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import Features from './Components/Features';
+import BusinessSolution from './Components/BusinessSolution';
+import Mission from './Components/Mission';
+import VideoPresentation from './Components/VideoPresentation';
+import Skill from './Components/Skill';
+import Counter from './Components/Counter';
+import Portfolio from './Components/Portfolio';
+import Testimonial from './Components/Testimonial';
+import ContactForm from './Components/ContactForm';
+import BrandSlider from './Components/BrandSlider';
+import Footer from './Components/Footer';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Home />
+      <Features />
+      <BusinessSolution />
+      <Mission />
+      <VideoPresentation />
+      <Skill />
+      <Counter />
+      <Portfolio />
+      <Testimonial />
+      <ContactForm />
+      <BrandSlider />
+      <Footer />
+    </>
   );
 }
 

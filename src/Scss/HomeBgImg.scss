@@ -1,0 +1,218 @@
+// -----BG IMG-------
+.bg-img-1 {
+    position: absolute;
+    left: 2.6%;
+    top: 12%;
+    animation: animationFramesOne 15s linear infinite;
+}
+
+.bg-img-2 {
+    position: absolute;
+    top: 13%;
+    left: 2.8%;
+    animation: animationFramesThree 15s linear infinite;
+
+}
+
+.bg-img-3 {
+    position: absolute;
+    left: 1.5%;
+    bottom: 35.6%;
+    animation: animationFramesOne 15s linear infinite;
+}
+
+.bg-img-4 {
+    position: absolute;
+    left: 33%;
+    bottom: 13%;
+    animation: animationFramesTwo 15s linear infinite;
+}
+
+.bg-img-5 {
+    position: absolute;
+    left: 37%;
+    bottom: 16%;
+    animation: animationFramesTwo 15s linear infinite;
+}
+
+.bg-img-6 {
+    position: absolute;
+    right: 40.2%;
+    top: -1%;
+    animation: animationFramesFour 15s linear infinite;
+}
+
+.bg-img-7 {
+    position: absolute;
+    right: 46.5%;
+    bottom: 0;
+
+    animation: animationFramesFive 15s linear infinite;
+}
+
+.bg-img-8 {
+    position: absolute;
+    right: 6.3%;
+    top: 15%;
+    animation: animationFramesSix 15s linear infinite;
+}
+
+.bg-img-9 {
+    position: absolute;
+    right: -4%;
+    bottom: 14%;
+    animation: ripple4 15s linear infinite;
+}
+
+// ---1, 3 img----
+@keyframes animationFramesOne {
+    0% {
+        -webkit-transform: translate(0) rotate(0deg);
+        transform: translate(0) rotate(0deg);
+    }
+
+    20% {
+        -webkit-transform: translate(73px, -1px) rotate(36deg);
+        transform: translate(73px, -1px) rotate(36deg);
+    }
+
+    40% {
+        -webkit-transform: translate(141px, 72px) rotate(72deg);
+        transform: translate(141px, 72px) rotate(72deg);
+    }
+
+    60% {
+        -webkit-transform: translate(83px, 122px) rotate(108deg);
+        transform: translate(83px, 122px) rotate(108deg);
+    }
+
+    80% {
+        -webkit-transform: translate(-40px, 72px) rotate(144deg);
+        transform: translate(-40px, 72px) rotate(144deg);
+    }
+
+    100% {
+        -webkit-transform: translate(0) rotate(0deg);
+        transform: translate(0) rotate(0deg);
+    }
+}
+
+
+// ---2 img-----
+@keyframes animationFramesThree {
+    0% {
+        -webkit-transform: translate(1000px, 1000px);
+        transform: translate(1000px, 1000px);
+    }
+
+    100% {
+        -webkit-transform: translate(-500px, -500px);
+        transform: translate(-500px, -500px);
+    }
+}
+
+// ---4, 5 img----
+@keyframes animationFramesTwo {
+    0% {
+        -webkit-transform: translate(0) rotate(0deg) scale(1);
+        transform: translate(0) rotate(0deg) scale(1);
+    }
+
+    20% {
+        -webkit-transform: translate(200px, -1px) rotate(36deg) scale(.7);
+        transform: translate(200px, -1px) rotate(36deg) scale(.7);
+    }
+
+    40% {
+        -webkit-transform: translate(251px, 140px) rotate(72deg) scale(.6);
+        transform: translate(251px, 140px) rotate(72deg) scale(.6);
+    }
+
+    60% {
+        -webkit-transform: translate(141px, 250px) rotate(108deg) scale(.7);
+        transform: translate(141px, 250px) rotate(108deg) scale(.7);
+    }
+
+    80% {
+        -webkit-transform: translate(-40px, 100px) rotate(144deg) scale(.8);
+        transform: translate(-40px, 100px) rotate(144deg) scale(.8);
+    }
+
+    100% {
+        -webkit-transform: translate(0) rotate(0deg) scale(1);
+        transform: translate(0) rotate(0deg) scale(1);
+    }
+}
+
+// -----6 img--------
+
+@keyframes animationFramesFour {
+    0% {
+        -webkit-transform: translate(-1000px, 1000px);
+        transform: translate(-1000px, 1000px);
+    }
+
+    100% {
+        -webkit-transform: translate(200px, -200px);
+        transform: translate(200px, -200px);
+    }
+}
+
+
+// ----7 img-------
+@keyframes animationFramesFive {
+    0% {
+        -webkit-transform: translate(200px, 200px);
+        transform: translate(200px, 200px);
+    }
+
+    100% {
+        -webkit-transform: translate(-1000px, -1000px);
+        transform: translate(-1000px, -1000px);
+    }
+}
+
+
+
+// ------8 img-------
+@keyframes animationFramesSix {
+    0% {
+        -webkit-transform: translate(-250px, 200px);
+        transform: translate(-250px, 200px);
+    }
+}
+
+
+// --9 img--------
+@keyframes ripple4 {
+    0% {
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: .5;
+    }
+}
+
+
+@media (max-width: 426px) {
+    .home_page_bg_img {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .Background_img .banner{
+        padding-top: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 1499px) {
+    .bg-img-8{
+        display: none;
+    }
+}

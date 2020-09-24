@@ -1,0 +1,170 @@
+@import 'Variables';
+@import 'Mixin';
+
+
+.Video_Presentation_section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 85px;
+
+  .Video_content {
+    background: url('../Img/bg-img-37842434bf8e5cf09e0ac1107be6b148.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding-top: 80px;
+
+    &::after {
+      position: absolute;
+      content: " ";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0.9;
+      background: $gradient;
+    }
+
+    h1 {
+      @include Main_heading_h1;
+      position: relative;
+      margin-bottom: 14px;
+      z-index: 1;
+      font-size: 38px;
+    }
+
+    h2 {
+      position: relative;
+      color: $Text_white_color;
+      text-transform: capitalize;
+      font-size: 30px;
+      font-weight: 500;
+      z-index: 1;
+      letter-spacing: 1px;
+    }
+
+    p {
+      @include banner_para;
+      padding: 20px 0 40px 0;
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: auto;
+      font-size: 16px;
+
+    }
+
+    // -------Video Button-------
+    .video-btn {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 90px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url('../Img/download (1).png') no-repeat 50%;
+        background-size: contain;
+        animation-name: rotate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        transform-origin: 50% 50%;
+      }
+
+      span {
+        background: url('../Img/download (2).png') no-repeat 50%;
+        background-size: contain;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        margin: 12px;
+      }
+
+      // -----------Image Rotate--------------
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// --------Media Query----------
+@media (max-width: 768px) {
+  .Video_Presentation_section .Video_content {
+    padding-top: 50px;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      padding: 10px 30px 20px 30px;
+      font-size: 15px;
+    }
+  }
+
+  .Video_Presentation_section .Video_content .video-btn {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .Video_Presentation_section {
+    margin-bottom: 40px;
+  }
+}
+
+
+@media (max-width: 426px) {
+  .Video_Presentation_section .Video_content {
+    h2 {
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 26px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .Video_Presentation_section .Video_content {
+    h2 {
+      font-size: 18px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    p {
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@import 'Variables';
+@import 'Mixin';
+
+.skill_section {
+
+    padding-bottom: 75px;
+    position: relative;
+
+    // --------Left Side Img-----------
+    .skill_img {
+        max-width: 90%;
+    }
+
+    // --------Content Part-------
+    .skill_content {
+        text-align: left;
+        padding-top: 30px;
+
+        h2 {
+            @include Main_heading_h1;
+            margin-bottom: 12px;
+            padding-bottom: 20px;
+            color: $Text_dark_color;
+            font-size: 38px;
+        }
+
+        h3 {
+            color: #606060;
+            font-size: 26px;
+            font-weight: 500;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: 50px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 36px;
+                height: 2.5px;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                background: $gradient;
+            }
+        }
+
+        p {
+            @include Dark_light_para;
+            width: 93%;
+            padding: 10px 0 15px 0;
+        }
+
+        .skills_bar {
+            h4 {
+                color: #8200ff;
+                position: relative;
+                text-transform: capitalize;
+                margin-bottom: 20px;
+                font-size: 20px;
+                font-weight: 400;
+            }
+
+            h5 {
+                color: $Text_dark_color;
+                font-size: 15px;
+                font-weight: 400;
+                position: relative;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+            }
+
+            .progress {
+                margin-bottom: 22px;
+                height: 8px;
+                background-color: #efefef;
+                border-radius: 0;
+
+                .Strategies_bar {
+                    width: 96%;
+                    background-color: #e000ff;
+                }
+
+                .Planning_bar {
+                    width: 88%;
+                    background-color: #8200ff;
+                }
+
+                .Customer_Support_bar {
+                    width: 90%;
+                    background-color: #e000ff;
+                }
+
+                .Finance_bar {
+                    width: 94%;
+                    background-color: #8200ff;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .skill_section {
+        padding-bottom: 30px;
+    }
+
+    .skill_section .skill_content {
+        padding-top: 0;
+    }
+
+    .skill_section .skill_img {
+        padding-top: 70px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .skill_section .skill_content {
+        h2 {
+            font-size: 26px;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        p {
+            padding: 0;
+            font-size: 14px;
+        }
+    }
+
+    .skill_section .skill_img {
+        max-width: 100%;
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .skill_img {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 426px) {
+    .skill_section .skill_content {
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    .skill_section {
+        padding-bottom: 20px;
+    }
+}
