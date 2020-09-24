@@ -167,7 +167,7 @@ body {
     }
 
     .Background_img .content_div {
-        padding-top: 0px;
+        padding-top: 40px;
     }
 }
 
@@ -194,5 +194,19 @@ body {
 
     .Background_img .content_div .banner_button {
         margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Background_img .banner {
+        padding-top: 80px !important;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .top-logo img {
+        // width: 86px;
+        text-align: left;
+        display: flex;
+        float: left;
     }
 }
